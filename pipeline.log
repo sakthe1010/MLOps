@@ -64,3 +64,102 @@ Duplicate headline found. Skipping insert.
 Successfully inserted 2 new stories into the database.
 
 2025-02-02 20:41:14,667 - INFO - Pipeline Execution Completed Successfully
+2025-02-02 20:48:15,136 - INFO - Starting News Scraper Pipeline
+2025-02-02 20:48:15,136 - INFO - Starting Module 1: Preprocessing at 2025-02-02 20:48:15
+2025-02-02 20:48:15,951 - INFO - Module 1: Preprocessing completed successfully at 2025-02-02 20:48:15
+2025-02-02 20:48:15,951 - INFO - Output: Fetching Google News homepage: https://news.google.com/
+
+Google News homepage successfully fetched and saved as 'google_news_homepage.html'.
+2025-02-02 20:48:15,952 - INFO - Starting Module 2: Transformation at 2025-02-02 20:48:15
+2025-02-02 20:48:17,843 - INFO - Module 2: Transformation completed successfully at 2025-02-02 20:48:17
+2025-02-02 20:48:17,843 - INFO - Output: Extracted 'Top Stories' Link: https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFZxYUdjU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen
+
+Updated config.json with URL: https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFZxYUdjU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen
+2025-02-02 20:48:17,843 - INFO - Starting Module 3: Scraping at 2025-02-02 20:48:17
+2025-02-02 20:49:42,689 - INFO - Module 3: Scraping completed successfully at 2025-02-02 20:49:42
+2025-02-02 20:49:42,689 - INFO - Output: Scrolling to load all content...
+Finished scrolling.
+Saved 35 stories to news_stories.json
+2025-02-02 20:49:42,689 - INFO - Starting Module 4: Insert Data into PostgreSQL at 2025-02-02 20:49:42
+2025-02-02 20:49:42,887 - INFO - Module 4: Insert Data into PostgreSQL completed successfully at 2025-02-02 20:49:42
+2025-02-02 20:49:42,889 - INFO - Output: Loaded 35 stories from JSON.
+Connecting to PostgreSQL...
+Connection established.
+Successfully inserted all stories (duplicates included) into the database.
+Connection closed.
+2025-02-02 20:49:42,889 - INFO - Starting Module 5: Remove Duplicates from Database at 2025-02-02 20:49:42
+2025-02-02 20:49:43,105 - INFO - Module 5: Remove Duplicates from Database completed successfully at 2025-02-02 20:49:43
+2025-02-02 20:49:43,105 - INFO - Output: Removed duplicate article ID 21 (Headline: Budget 2025: India Cuts Import Duty On High-End Cars, Motorcycles In Boost To Harley Davidson, Tesla)
+Removed duplicate article ID 74 (Headline: Sky Force Box Office Day 10 Prediction: Over 80% Jump From 2nd Friday? Ready To Beat Jolly LLB 2 & 2 More Akshay Kumar’s 100 Crore Grossers!)
+Removed duplicate article ID 6 (Headline: Complaint filed against Sonia Gandhi in Bihar court for remark on President)
+Removed duplicate article ID 78 (Headline: Maha Kumbh: Medical force on high alert ahead of Basant Panchami Snan on February 3)
+Removed duplicate article ID 76 (Headline: 'Life changed after I lost my father during 1999 World Cup...': Sachin reveals story behind his century celebrations)
+Removed duplicate article ID 75 (Headline: WWE Royal Rumble 2025: Jey Uso Wins Men's Event; Charlotte Flair Triumphs In Women's Match)
+Removed duplicate article ID 71 (Headline: Deva Box Office Collection Day 3)
+Removed duplicate article ID 72 (Headline: What did the Budget say about ‘Make in India’?)
+Removed duplicate article ID 11 (Headline: Intermittent rains, snow likely in J-K till Feb 10; says MeT)
+Removed duplicate article ID 12 (Headline: After Bihar budget bonanza, YSRCP's swipe at NDA ally TDP: 'Andhra got zero')
+Removed duplicate article ID 86 (Headline: India vs England LIVE Updates, 5th T20I: Centurion Abhishek Breaks Record Of Sixes, India Target 250)
+Error removing duplicates: 'charmap' codec can't encode character '\u20b9' in position 96: character maps to <undefined>
+2025-02-02 20:49:43,105 - INFO - Pipeline Execution Completed Successfully
+2025-02-02 20:54:39,466 - INFO - Starting News Scraper Pipeline
+2025-02-02 20:54:39,466 - INFO - Starting Module 1: Preprocessing at 2025-02-02 20:54:39
+2025-02-02 20:54:40,184 - INFO - Module 1: Preprocessing completed successfully at 2025-02-02 20:54:40
+2025-02-02 20:54:40,184 - INFO - Output: Fetching Google News homepage: https://news.google.com/
+
+Google News homepage successfully fetched and saved as 'google_news_homepage.html'.
+2025-02-02 20:54:40,184 - INFO - Starting Module 2: Transformation at 2025-02-02 20:54:40
+2025-02-02 20:54:42,038 - INFO - Module 2: Transformation completed successfully at 2025-02-02 20:54:42
+2025-02-02 20:54:42,038 - INFO - Output: Extracted 'Top Stories' Link: https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFZxYUdjU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen
+
+Updated config.json with URL: https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFZxYUdjU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen
+2025-02-02 20:54:42,038 - INFO - Starting Module 3: Scraping at 2025-02-02 20:54:42
+2025-02-02 20:56:04,402 - INFO - Module 3: Scraping completed successfully at 2025-02-02 20:56:04
+2025-02-02 20:56:04,402 - INFO - Output: Scrolling to load all content...
+Finished scrolling.
+Saved 34 stories to news_stories.json
+2025-02-02 20:56:04,402 - INFO - Starting Module 4: Insert Data into PostgreSQL at 2025-02-02 20:56:04
+2025-02-02 20:56:04,638 - INFO - Module 4: Insert Data into PostgreSQL completed successfully at 2025-02-02 20:56:04
+2025-02-02 20:56:04,638 - INFO - Output: Loaded 34 stories from JSON.
+Connecting to PostgreSQL...
+Connection established.
+Successfully inserted all stories (duplicates included) into the database.
+Connection closed.
+2025-02-02 20:56:04,638 - INFO - Starting Module 5: Remove Duplicates from Database at 2025-02-02 20:56:04
+2025-02-02 20:56:05,253 - INFO - Module 5: Remove Duplicates from Database completed successfully at 2025-02-02 20:56:05
+2025-02-02 20:56:05,253 - INFO - Output: Removed duplicate: Complaint filed against Sonia Gandhi in Bihar court for remark on President
+Removed duplicate: Food, fuel, steel, and more: What could get expensive in US after Trump imposes tariff on Canada, Mexico
+Removed duplicate: Kejriwal writes to EC, demands appointment of independent observers in New Delhi constituency
+Removed duplicate: PM Narendra Modi's 'jhaadu ke tinke' dig at Arvind Kejriwal's AAP after 8 MLAs joined BJP
+Removed duplicate: ‘Declare Kerala backward’: Union minister's remark post-Union budget sparks row
+Removed duplicate: Maha Kumbh 2025: Basant Panchami on February 3; officials prepare for zero-error ahead of 'amrit snan'
+Removed duplicate: CJI & HC Chief Justices Meet To Discuss Evening Courts, Ad Hoc Judges; Supreme Court Holds Conference On...
+Removed duplicate: ‘I failed, I will resign’: Faizabad MP breaks into tears over Dalit woman's ‘murder’ in Ayodhya
+Removed duplicate: Health sector gets shot in the arm with `99,858 crore allocation
+Removed duplicate: India vs England LIVE Updates, 5th T20I: Centurion Abhishek Breaks Record Of Sixes, India Target 250
+Removed duplicate: Intermittent rains, snow likely in J-K till Feb 10; says MeT
+Removed duplicate article (could not display special characters)
+Removed duplicate: India U19 players sprint across field with tricolor as emotions run high after Women's T20 World Cup title victory
+Removed duplicate: Vasant Panchami 2025: How this auspicious day influences your zodiac sign
+Removed duplicate: US Army finally reveals name of pilot flying Black Hawk chopper that crashed into jet
+Removed duplicate article (could not display special characters)
+Removed duplicate: After Bihar budget bonanza, YSRCP's swipe at NDA ally TDP: 'Andhra got zero'
+Removed duplicate: Budget 2025: India Cuts Import Duty On High-End Cars, Motorcycles In Boost To Harley Davidson, Tesla
+Removed duplicate: FMCG, Auto, Consumer Durables, Insurance and other sectors set to benefit from Union Budget 2025
+Removed duplicate: Concussion sub row: ICC match referee Chris Broad sees 'bias and corruption'
+Removed duplicate: Deva Box Office Collection Day 3
+Removed duplicate: Sky Force Box Office Day 10 Prediction: Over 80% Jump From 2nd Friday? Ready To Beat Jolly LLB 2 & 2 More Akshay Kumar’s 100 Crore Grossers!
+Removed duplicate: WWE Royal Rumble 2025: Jey Uso Wins Men's Event; Charlotte Flair Triumphs In Women's Match
+Removed duplicate: 'Life changed after I lost my father during 1999 World Cup...': Sachin reveals story behind his century celebrations
+Removed duplicate: Gukesh vs Praggnanandhaa in hunt for Tata Steel chess title after night of glorious sacs, dramatic draws, and Arjun Erigaisi’s turnaround
+Removed duplicate: What did the Budget say about ‘Make in India’?
+Removed duplicate: India vs England LIVE Cricket Score, 5th T20I: Abhishek Sharma scores 100, IND 228/6 vs ENG in Mumbai
+Removed duplicate: Focus on Bihar: Here are the schemes announced for the state in the Budget
+Removed duplicate article (could not display special characters)
+Removed duplicate: Karnataka got nothing but 'Khali Chombu' in Union Budget 2025 : CM Siddaramaiah
+Removed duplicate: TDS limit for interest income from bank FD hiked from Rs 40,000 in Budget 2025: Check details
+Removed duplicate: Kia Sales Jan 2025 - 5,546 Syros SUV Units Dispatched
+Removed duplicate: Budget 2025: Dixon Technologies explains why the flat panel display custom duty hike is a positive
+Removed duplicate: Budget: Taxpayers get relief on 2 self-occupied properties under new rule
+Removed 34 duplicate articles.
+2025-02-02 20:56:05,253 - INFO - Pipeline Execution Completed Successfully

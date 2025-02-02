@@ -19,12 +19,12 @@ def run_module(module_name, script_name):
         result = subprocess.run(["python", script_name], capture_output=True, text=True, check=True)
         end_time = datetime.now()
         logging.info(f"{module_name} completed successfully at {end_time.strftime('%Y-%m-%d %H:%M:%S')}")
-        logging.info(f"Output: {result.stdout}")
+        logging.info(f"Output: {result.stdout.strip()}")
     except subprocess.CalledProcessError as e:
         error_time = datetime.now()
         logging.error(f"{module_name} failed at {error_time.strftime('%Y-%m-%d %H:%M:%S')}")
-        logging.error(f"Error Message: {e.stderr}")
-        logging.error(f"Full Command Output: {e.output}")
+        logging.error(f"Error Message: {e.stderr.strip()}")
+        logging.error(f"Full Command Output: {e.output.strip()}")
         return False  # Stop execution if a module fails
 
     return True  # Continue if successful
@@ -40,7 +40,9 @@ def main():
         return
     if not run_module("Module 3: Scraping", "module_3.py"):
         return
-    if not run_module("Module 4_5: Storage & Deduplication", "module_4_5.py"):
+    if not run_module("Module 4: Insert Data into PostgreSQL", "module_4.py"):
+        return
+    if not run_module("Module 5: Remove Duplicates from Database", "module_5.py"):
         return
 
     logging.info("Pipeline Execution Completed Successfully")

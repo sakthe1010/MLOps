@@ -42,15 +42,19 @@ def remove_duplicates():
                     cursor.execute("DELETE FROM articles WHERE id = %s;", (older_id,))
                     duplicates_removed += 1
 
-                    print(f"Removed duplicate article ID {older_id} (Headline: {compare_headline})")
-
-            checked_articles.add(article_id)
+                    # ✅ **Fix Encoding Issue When Printing**
+                    try:
+                        print(f"Removed duplicate: {compare_headline.encode('utf-8', 'ignore').decode('utf-8')}")
+                    except UnicodeEncodeError:
+                        print("Removed duplicate article (could not display special characters)")
 
         conn.commit()
         print(f"Removed {duplicates_removed} duplicate articles.")
 
     except Exception as e:
-        print(f"Error removing duplicates: {e}")
+        # ✅ **Fix Encoding Issue in Error Messages**
+        error_message = str(e).encode('utf-8', 'ignore').decode('utf-8')
+        print(f"Error removing duplicates: {error_message}")
 
     finally:
         if conn:
