@@ -163,3 +163,164 @@ Removed duplicate: Budget 2025: Dixon Technologies explains why the flat panel d
 Removed duplicate: Budget: Taxpayers get relief on 2 self-occupied properties under new rule
 Removed 34 duplicate articles.
 2025-02-02 20:56:05,253 - INFO - Pipeline Execution Completed Successfully
+2025-02-02 21:10:12,251 - INFO - Starting News Scraper Pipeline
+2025-02-02 21:10:12,251 - INFO - Starting Module 1: Preprocessing at 2025-02-02 21:10:12
+2025-02-02 21:10:12,986 - INFO - Module 1: Preprocessing completed successfully at 2025-02-02 21:10:12
+2025-02-02 21:10:12,986 - INFO - Output: Fetching Google News homepage: https://news.google.com/
+
+Google News homepage successfully fetched and saved as 'google_news_homepage.html'.
+2025-02-02 21:10:12,986 - INFO - Starting Module 2: Transformation at 2025-02-02 21:10:12
+2025-02-02 21:10:14,870 - INFO - Module 2: Transformation completed successfully at 2025-02-02 21:10:14
+2025-02-02 21:10:14,870 - INFO - Output: Extracted 'Top Stories' Link: https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFZxYUdjU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen
+
+Updated config.json with URL: https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFZxYUdjU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen
+2025-02-02 21:10:14,870 - INFO - Starting Module 3: Scraping at 2025-02-02 21:10:14
+2025-02-02 21:11:50,524 - INFO - Module 3: Scraping completed successfully at 2025-02-02 21:11:50
+2025-02-02 21:11:50,525 - INFO - Output: Scrolling to load all content...
+Finished scrolling.
+Saved 40 stories to top_stories_news.json
+2025-02-02 21:11:50,525 - INFO - Starting Module 4: Insert Data into PostgreSQL at 2025-02-02 21:11:50
+2025-02-02 21:11:50,581 - INFO - Module 4: Insert Data into PostgreSQL completed successfully at 2025-02-02 21:11:50
+2025-02-02 21:11:50,581 - INFO - Output: Error loading JSON file: [Errno 2] No such file or directory: 'news_stories.json'
+No stories found in JSON file.
+2025-02-02 21:11:50,581 - INFO - Starting Module 5: Remove Duplicates from Database at 2025-02-02 21:11:50
+2025-02-02 21:11:50,835 - INFO - Module 5: Remove Duplicates from Database completed successfully at 2025-02-02 21:11:50
+2025-02-02 21:11:50,835 - INFO - Output: Removed 0 duplicate articles.
+2025-02-02 21:11:50,835 - INFO - Pipeline Execution Completed Successfully
+2025-02-02 21:14:45,775 - INFO - Starting News Scraper Pipeline
+2025-02-02 21:14:45,775 - INFO - Starting Module 1: Preprocessing at 2025-02-02 21:14:45
+2025-02-02 21:14:46,623 - INFO - Module 1: Preprocessing completed successfully at 2025-02-02 21:14:46
+2025-02-02 21:14:46,623 - INFO - Output: Fetching Google News homepage: https://news.google.com/
+
+Google News homepage successfully fetched and saved as 'google_news_homepage.html'.
+2025-02-02 21:14:46,623 - INFO - Starting Module 2: Transformation at 2025-02-02 21:14:46
+2025-02-02 21:14:48,454 - INFO - Module 2: Transformation completed successfully at 2025-02-02 21:14:48
+2025-02-02 21:14:48,455 - INFO - Output: Extracted 'Top Stories' Link: https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFZxYUdjU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen
+
+Updated config.json with URL: https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFZxYUdjU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen
+2025-02-02 21:14:48,455 - INFO - Starting Module 3: Scraping at 2025-02-02 21:14:48
+2025-02-02 21:16:28,542 - INFO - Module 3: Scraping completed successfully at 2025-02-02 21:16:28
+2025-02-02 21:16:28,542 - INFO - Output: Scrolling to load all content...
+Finished scrolling.
+Saved 42 stories to top_stories_news.json
+2025-02-02 21:16:28,542 - INFO - Starting Module 4: Insert Data into PostgreSQL at 2025-02-02 21:16:28
+2025-02-02 21:16:28,593 - INFO - Module 4: Insert Data into PostgreSQL completed successfully at 2025-02-02 21:16:28
+2025-02-02 21:16:28,594 - INFO - Output: Error loading JSON file: [Errno 2] No such file or directory: 'top_stories.json'
+No stories found in JSON file.
+2025-02-02 21:16:28,594 - INFO - Starting Module 5: Remove Duplicates from Database at 2025-02-02 21:16:28
+2025-02-02 21:16:28,846 - INFO - Module 5: Remove Duplicates from Database completed successfully at 2025-02-02 21:16:28
+2025-02-02 21:16:28,846 - INFO - Output: Removed 0 duplicate articles.
+2025-02-02 21:16:28,846 - INFO - Pipeline Execution Completed Successfully
+2025-02-02 21:16:51,547 - INFO - Starting News Scraper Pipeline
+2025-02-02 21:16:51,547 - INFO - Starting Module 1: Preprocessing at 2025-02-02 21:16:51
+2025-02-02 21:16:52,340 - INFO - Module 1: Preprocessing completed successfully at 2025-02-02 21:16:52
+2025-02-02 21:16:52,340 - INFO - Output: Fetching Google News homepage: https://news.google.com/
+
+Google News homepage successfully fetched and saved as 'google_news_homepage.html'.
+2025-02-02 21:16:52,340 - INFO - Starting Module 2: Transformation at 2025-02-02 21:16:52
+2025-02-02 21:16:54,193 - INFO - Module 2: Transformation completed successfully at 2025-02-02 21:16:54
+2025-02-02 21:16:54,193 - INFO - Output: Extracted 'Top Stories' Link: https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFZxYUdjU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen
+
+Updated config.json with URL: https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFZxYUdjU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen
+2025-02-02 21:16:54,193 - INFO - Starting Module 3: Scraping at 2025-02-02 21:16:54
+2025-02-02 21:18:35,361 - INFO - Module 3: Scraping completed successfully at 2025-02-02 21:18:35
+2025-02-02 21:18:35,361 - INFO - Output: Scrolling to load all content...
+Finished scrolling.
+Saved 42 stories to top_stories_news.json
+2025-02-02 21:18:35,361 - INFO - Starting Module 4: Insert Data into PostgreSQL at 2025-02-02 21:18:35
+2025-02-02 21:18:35,452 - INFO - Module 4: Insert Data into PostgreSQL completed successfully at 2025-02-02 21:18:35
+2025-02-02 21:18:35,453 - INFO - Output: Loaded 42 stories from JSON.
+Connecting to PostgreSQL...
+Connection established.
+Error connecting to database: 'charmap' codec can't encode character '\u20b9' in position 79: character maps to <undefined>
+Connection closed.
+2025-02-02 21:18:35,453 - INFO - Starting Module 5: Remove Duplicates from Database at 2025-02-02 21:18:35
+2025-02-02 21:18:35,714 - INFO - Module 5: Remove Duplicates from Database completed successfully at 2025-02-02 21:18:35
+2025-02-02 21:18:35,714 - INFO - Output: Removed 0 duplicate articles.
+2025-02-02 21:18:35,714 - INFO - Pipeline Execution Completed Successfully
+2025-02-02 21:21:51,130 - INFO - Starting News Scraper Pipeline
+2025-02-02 21:21:51,131 - INFO - Starting Module 1: Preprocessing at 2025-02-02 21:21:51
+2025-02-02 21:21:51,843 - INFO - Module 1: Preprocessing completed successfully at 2025-02-02 21:21:51
+2025-02-02 21:21:51,843 - INFO - Output: Fetching Google News homepage: https://news.google.com/
+
+Google News homepage successfully fetched and saved as 'google_news_homepage.html'.
+2025-02-02 21:21:51,843 - INFO - Starting Module 2: Transformation at 2025-02-02 21:21:51
+2025-02-02 21:21:53,690 - INFO - Module 2: Transformation completed successfully at 2025-02-02 21:21:53
+2025-02-02 21:21:53,690 - INFO - Output: Extracted 'Top Stories' Link: https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFZxYUdjU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen
+
+Updated config.json with URL: https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFZxYUdjU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen
+2025-02-02 21:21:53,690 - INFO - Starting Module 3: Scraping at 2025-02-02 21:21:53
+2025-02-02 21:23:22,146 - INFO - Module 3: Scraping completed successfully at 2025-02-02 21:23:22
+2025-02-02 21:23:22,146 - INFO - Output: Scrolling to load all content...
+Finished scrolling.
+Saved 36 stories to top_stories_news.json
+2025-02-02 21:23:22,146 - INFO - Starting Module 4: Insert Data into PostgreSQL at 2025-02-02 21:23:22
+2025-02-02 21:23:22,233 - INFO - Module 4: Insert Data into PostgreSQL completed successfully at 2025-02-02 21:23:22
+2025-02-02 21:23:22,233 - INFO - Output: Loaded 36 stories from JSON.
+Connecting to PostgreSQL...
+Connection established.
+Error connecting to database: 'charmap' codec can't encode character '\u20b9' in position 79: character maps to <undefined>
+Connection closed.
+2025-02-02 21:23:22,233 - INFO - Starting Module 5: Remove Duplicates from Database at 2025-02-02 21:23:22
+2025-02-02 21:23:22,482 - INFO - Module 5: Remove Duplicates from Database completed successfully at 2025-02-02 21:23:22
+2025-02-02 21:23:22,482 - INFO - Output: Removed 0 duplicate articles.
+2025-02-02 21:23:22,482 - INFO - Pipeline Execution Completed Successfully
+2025-02-02 21:49:33,732 - INFO - Starting News Scraper Pipeline
+2025-02-02 21:49:33,733 - INFO - Starting Module 1: Preprocessing at 2025-02-02 21:49:33
+2025-02-02 21:49:34,555 - INFO - Module 1: Preprocessing completed successfully at 2025-02-02 21:49:34
+2025-02-02 21:49:34,555 - INFO - Output: Fetching Google News homepage: https://news.google.com/
+
+Google News homepage successfully fetched and saved as 'google_news_homepage.html'.
+2025-02-02 21:49:34,555 - INFO - Starting Module 2: Transformation at 2025-02-02 21:49:34
+2025-02-02 21:49:36,424 - INFO - Module 2: Transformation completed successfully at 2025-02-02 21:49:36
+2025-02-02 21:49:36,424 - INFO - Output: Extracted 'Top Stories' Link: https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFZxYUdjU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen
+
+Updated config.json with URL: https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFZxYUdjU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen
+2025-02-02 21:49:36,424 - INFO - Starting Module 3: Scraping at 2025-02-02 21:49:36
+2025-02-02 21:51:08,096 - INFO - Module 3: Scraping completed successfully at 2025-02-02 21:51:08
+2025-02-02 21:51:08,097 - INFO - Output: Scrolling to load all content...
+Finished scrolling.
+Saved 37 stories to news_stories.json
+2025-02-02 21:51:08,097 - INFO - Starting Module 4: Insert Data into PostgreSQL at 2025-02-02 21:51:08
+2025-02-02 21:51:08,298 - INFO - Module 4: Insert Data into PostgreSQL completed successfully at 2025-02-02 21:51:08
+2025-02-02 21:51:08,298 - INFO - Output: Loaded 37 stories from JSON.
+Connecting to PostgreSQL...
+Connection established.
+Successfully inserted all stories (duplicates included) into the database.
+Connection closed.
+2025-02-02 21:51:08,298 - INFO - Starting Module 5: Remove Duplicates from Database at 2025-02-02 21:51:08
+2025-02-02 21:51:09,017 - INFO - Module 5: Remove Duplicates from Database completed successfully at 2025-02-02 21:51:09
+2025-02-02 21:51:09,017 - INFO - Output: Removed duplicate: Vasant Panchami 2025: How this auspicious day influences your zodiac sign
+Removed duplicate: Delhi Assembly election 2025 LIVE updates: Most middle class friendly Budget, says PM Modi at poll rally
+Removed duplicate article (could not display special characters)
+Removed duplicate: India vs England LIVE Updates, 5th T20I: Centurion Abhishek Breaks Record Of Sixes, India Target 250
+Removed duplicate: ‘I failed, I will resign’: Faizabad MP breaks into tears over Dalit woman's ‘murder’ in Ayodhya
+Removed duplicate: Kejriwal writes to EC, demands appointment of independent observers in New Delhi constituency
+Removed duplicate: Gukesh vs Praggnanandhaa in hunt for Tata Steel chess title after night of glorious sacs, dramatic draws, and Arjun Erigaisi’s turnaround
+Removed duplicate: ‘Declare Kerala backward’: Union minister's remark post-Union budget sparks row
+Removed duplicate: Maha Kumbh: U.P. directs medical facilities of Pragayraj division to remain on high alert
+Removed duplicate: Complaint filed against Sonia Gandhi in Bihar court for remark on President
+Removed duplicate: Health sector gets shot in the arm with `99,858 crore allocation
+Removed duplicate: WWE Royal Rumble 2025: Jey Uso Wins Men's Event; Charlotte Flair Triumphs In Women's Match
+Removed duplicate article (could not display special characters)
+Removed duplicate: After Bihar budget bonanza, YSRCP's swipe at NDA ally TDP: 'Andhra got zero'
+Removed duplicate: India vs England LIVE Cricket Score, 5th T20I: Abhishek Sharma scores 100, IND 228/6 vs ENG in Mumbai
+Removed duplicate: Sky Force Box Office Day 9: Akshay Kumar’s Two Post-COVID 100 Crore Grossers Achieved This Feat, Ready To Join The List!
+Removed duplicate: Deva Box Office Collection Day 3
+Removed duplicate: FMCG, Auto, Consumer Durables, Insurance and other sectors set to benefit from Union Budget 2025
+Removed duplicate: Concussion sub row: ICC match referee Chris Broad sees 'bias and corruption'
+Removed duplicate: CJI & HC Chief Justices Meet To Discuss Evening Courts, Ad Hoc Judges; Supreme Court Holds Conference On...
+Removed duplicate: Intermittent rains, snow likely in J-K till Feb 10; says MeT
+Removed duplicate: 'Upper caste members should handle Tribal Affairs Ministry': MoS Suresh Gopi's remark invites wrath
+Removed duplicate: What did the Budget say about ‘Make in India’?
+Removed duplicate: Trump’s tariff gamble: 'Pain' ahead, but 'worth the price' to secure US interests
+Removed duplicate: US Army finally reveals name of pilot flying Black Hawk chopper that crashed into jet
+Removed duplicate: Focus on Bihar: Here are the schemes announced for the state in the Budget
+Removed duplicate: Karnataka got nothing but 'Khali Chombu' in Union Budget 2025 : CM Siddaramaiah
+Removed duplicate article (could not display special characters)
+Removed duplicate: Kia Sales Jan 2025 - 5,546 Syros SUV Units Dispatched
+Removed duplicate: How will Budget 2025 impact senior citizens?
+Removed duplicate: Budget 2025: Dixon Technologies explains why the flat panel display custom duty hike is a positive
+Removed duplicate: Budget: Taxpayers get relief on 2 self-occupied properties under new rule
+Removed 32 duplicate articles.
+2025-02-02 21:51:09,018 - INFO - Pipeline Execution Completed Successfully
