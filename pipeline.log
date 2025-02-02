@@ -254,3 +254,30 @@ Connection closed.
 2025-02-02 23:09:27,949 - INFO - Module 5: Remove Duplicates from Database completed successfully at 2025-02-02 23:09:27
 2025-02-02 23:09:27,949 - INFO - Output: Removed 33 duplicate articles.
 2025-02-02 23:09:27,949 - INFO - Pipeline Execution Completed Successfully
+2025-02-02 23:48:14,483 - INFO - Starting News Scraper Pipeline
+2025-02-02 23:48:14,483 - INFO - Starting Module 1: Preprocessing at 2025-02-02 23:48:14
+2025-02-02 23:48:15,362 - INFO - Module 1: Preprocessing completed successfully at 2025-02-02 23:48:15
+2025-02-02 23:48:15,362 - INFO - Output: Fetching Google News homepage: https://news.google.com/
+
+Google News homepage successfully fetched and saved as 'google_news_homepage.html'.
+2025-02-02 23:48:15,362 - INFO - Starting Module 2: Transformation at 2025-02-02 23:48:15
+2025-02-02 23:48:17,200 - INFO - Module 2: Transformation completed successfully at 2025-02-02 23:48:17
+2025-02-02 23:48:17,200 - INFO - Output: Extracted 'Top Stories' Link: https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFZxYUdjU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen
+
+Updated config.json with URL: https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFZxYUdjU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen
+2025-02-02 23:48:17,200 - INFO - Starting Module 3: Scraping at 2025-02-02 23:48:17
+2025-02-02 23:50:30,146 - INFO - Module 3: Scraping completed successfully at 2025-02-02 23:50:30
+2025-02-02 23:50:30,146 - INFO - Output: Scrolling to load all content...
+Finished scrolling.
+Saved 49 stories to news_stories.json
+2025-02-02 23:50:30,146 - INFO - Starting Module 4: Insert Data into PostgreSQL at 2025-02-02 23:50:30
+2025-02-02 23:50:30,458 - INFO - Module 4: Insert Data into PostgreSQL completed successfully at 2025-02-02 23:50:30
+2025-02-02 23:50:30,458 - INFO - Output: Loaded 49 stories from JSON.
+Connecting to PostgreSQL...
+Connection established.
+Successfully inserted all stories (duplicates included) into the database.
+Connection closed.
+2025-02-02 23:50:30,458 - INFO - Starting Module 5: Remove Duplicates from Database at 2025-02-02 23:50:30
+2025-02-02 23:50:31,326 - INFO - Module 5: Remove Duplicates from Database completed successfully at 2025-02-02 23:50:31
+2025-02-02 23:50:31,326 - INFO - Output: Removed 31 duplicate articles.
+2025-02-02 23:50:31,326 - INFO - Pipeline Execution Completed Successfully
