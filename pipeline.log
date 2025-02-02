@@ -1,0 +1,66 @@
+2025-02-02 20:39:23,396 - INFO - Starting News Scraper Pipeline
+2025-02-02 20:39:23,396 - INFO - Starting Module 1: Preprocessing at 2025-02-02 20:39:23
+2025-02-02 20:39:24,579 - INFO - Module 1: Preprocessing completed successfully at 2025-02-02 20:39:24
+2025-02-02 20:39:24,579 - INFO - Output: Fetching Google News homepage: https://news.google.com/
+
+Google News homepage successfully fetched and saved as 'google_news_homepage.html'.
+
+2025-02-02 20:39:24,580 - INFO - Starting Module 2: Transformation at 2025-02-02 20:39:24
+2025-02-02 20:39:29,376 - INFO - Module 2: Transformation completed successfully at 2025-02-02 20:39:29
+2025-02-02 20:39:29,376 - INFO - Output: 
+Extracted 'Top Stories' Link: https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFZxYUdjU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen
+
+Updated config.json with URL: https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFZxYUdjU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen
+
+2025-02-02 20:39:29,385 - INFO - Starting Module 3: Scraping at 2025-02-02 20:39:29
+2025-02-02 20:41:14,462 - INFO - Module 3: Scraping completed successfully at 2025-02-02 20:41:14
+2025-02-02 20:41:14,463 - INFO - Output: Scrolling to load all content...
+Finished scrolling.
+Saved 43 stories to news_stories.json
+
+2025-02-02 20:41:14,463 - INFO - Starting Module 4_5: Storage & Deduplication at 2025-02-02 20:41:14
+2025-02-02 20:41:14,667 - INFO - Module 4_5: Storage & Deduplication completed successfully at 2025-02-02 20:41:14
+2025-02-02 20:41:14,667 - INFO - Output: Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Duplicate headline found. Skipping insert.
+Successfully inserted 2 new stories into the database.
+
+2025-02-02 20:41:14,667 - INFO - Pipeline Execution Completed Successfully
