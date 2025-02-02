@@ -1,0 +1,16 @@
+{
+    "news_homepage": "https://news.google.com/",
+    "link_identifier": "topics/",
+    "url": "https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRFZxYUdjU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen",
+    "output_file": "news_stories.json",
+    "scroll_timeout": 2000,
+    "headless": true,
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "selectors": {
+        "story_container": "article",
+        "headline": "a.gPFEn:first-of-type",
+        "article_url": "a.gPFEn:first-of-type",
+        "thumbnail": "figure img",
+        "article_date": "time"
+    }
+}
