@@ -7,6 +7,7 @@ LOG_FILE = "pipeline.log"
 logging.basicConfig(
     filename=LOG_FILE,
     level=logging.INFO,
+    encoding="utf-8",
     format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
@@ -49,3 +50,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    print("Module 6 executed successfully.")

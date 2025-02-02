@@ -13,11 +13,11 @@ def extract_top_stories_link(html_content):
 
     # Find all <a> tags
     for link in soup.find_all("a", href=True):
-        if "Top stories" in link.text.strip():  # Look for the exact text in the link
+        if "Top stories" in link.text.strip(): 
             href = link.get("href")
-            return "https://news.google.com" + href[1:]  # Convert relative URL to full URL
+            return "https://news.google.com" + href[1:]  
 
-    return None  # Return None if no valid link is found
+    return None  
 
 def update_config_file(config_path, new_url):
     """Updates the 'url' field in the config.json file."""

@@ -53,9 +53,9 @@ def extract_stories(page, selectors, output_dir):
 
     # Extract current date and time
     current_datetime = datetime.now()
-    current_date = current_datetime.strftime("%Y-%m-%d")  # YYYY-MM-DD
-    yesterday_date = (current_datetime - timedelta(days=1)).strftime("%Y-%m-%d")  # YYYY-MM-DD for yesterday
-    scrape_time = current_datetime.strftime("%H:%M:%S")  # HH:MM:SS
+    current_date = current_datetime.strftime("%Y-%m-%d")
+    yesterday_date = (current_datetime - timedelta(days=1)).strftime("%Y-%m-%d")  
+    scrape_time = current_datetime.strftime("%H:%M:%S")  
 
     for idx, article in enumerate(articles):
         article.scroll_into_view_if_needed()
@@ -71,14 +71,14 @@ def extract_stories(page, selectors, output_dir):
 
         # Extract URL
         article_url = None
-        if "article_url" in selectors:
-            url_elem = article.query_selector(selectors["article_url"])
-            article_url = url_elem.get_attribute("href") if url_elem else None
-            if article_url:
-                article_url = urljoin(page.url, article_url)
+        url_elem = article.query_selector("a.gPFEn")
+        if url_elem:
+            article_url = url_elem.get_attribute("href")
+            if article_url.startswith("./"):  # Convert relative to full URL
+                article_url = urljoin("https://news.google.com/", article_url[2:])
 
-        if not article_url or article_url.lower() == "no url":
-            continue  # Skip if no valid URL
+        if not article_url:
+            continue 
 
         # Extract image URL
         img_elem = article.query_selector(selectors["thumbnail"])
@@ -91,7 +91,6 @@ def extract_stories(page, selectors, output_dir):
         if not img_url:  # Double-check if img_url is empty
             continue  
 
-        # Extract article date (Replace "Yesterday" with actual date)
         article_date = current_date  # Default to today's date
         if "article_date" in selectors:
             date_elem = article.query_selector(selectors["article_date"])
@@ -99,24 +98,22 @@ def extract_stories(page, selectors, output_dir):
 
             if article_date_raw:
                 if "ago" in article_date_raw.lower():
-                    article_date = current_date  # Replace relative time like "3 hours ago"
+                    article_date = current_date 
                 elif "yesterday" in article_date_raw.lower():
-                    article_date = yesterday_date  # Replace "Yesterday" with actual date
+                    article_date = yesterday_date  
                 else:
-                    article_date = article_date_raw  # Keep valid dates as they are
+                    article_date = article_date_raw 
 
-        # Download and save image
         img_path = download_image(page, img_url, output_dir)
-        if not img_path:  # Ensure the image was successfully downloaded
+        if not img_path:
             continue  
 
-        # Append valid story
         stories.append({
             "headline": headline,
             "url": article_url,
             "thumbnail_local_path": img_path,
-            "article_date": article_date,  # Now contains only the date
-            "scrape_timestamp": scrape_time  # Now contains only the time
+            "article_date": article_date, 
+            "scrape_timestamp": scrape_time  
         })
     
     return stories
@@ -137,7 +134,7 @@ def scrape_top_stories():
         stories = extract_stories(page, config["selectors"], output_dir)
         
         with open(config["output_file"], "w", encoding="utf-8") as f:
-            json.dump(stories, f, indent=2, ensure_ascii=False)  # Ensure proper Unicode storage
+            json.dump(stories, f, indent=2, ensure_ascii=False)  
         print(f"Saved {len(stories)} stories to {config['output_file']}")
         browser.close()
 

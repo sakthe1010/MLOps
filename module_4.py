@@ -7,7 +7,7 @@ from datetime import datetime
 DB_CONFIG = {
     "dbname": "mlops_assignment",
     "user": "postgres",
-    "password": "Sakthe@1010",  # Change this!
+    "password": "Sakthe@1010",  
     "host": "localhost",
     "port": 5432
 }
@@ -65,7 +65,7 @@ def save_to_postgresql(stories):
                 )
                 image_id = cursor.fetchone()[0]
 
-                # Insert Article (Duplicates Allowed)
+                # Insert Article 
                 cursor.execute("""
                     INSERT INTO articles (headline, url, scrape_time, article_date, image_id)
                     VALUES (%s, %s, %s, %s, %s);
@@ -87,7 +87,7 @@ def save_to_postgresql(stories):
             print("Connection closed.")
 
 if __name__ == "__main__":
-    json_file = "news_stories.json"  # Output from Module 3
+    json_file = "news_stories.json"
     stories = load_json_data(json_file)
 
     if stories:
