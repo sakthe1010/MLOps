@@ -27,22 +27,22 @@ def save_to_postgresql(stories):
     """
     Saves extracted stories from JSON into the PostgreSQL database.
     """
-    conn = None  # ✅ Initialize conn to None to prevent unbound errors
+    conn = None  # Initialize conn to None to prevent unbound errors
 
     try:
-        # ✅ Establish connection inside try block
+        # Establish database connection
         conn = psycopg2.connect(**DB_CONFIG)
         cursor = conn.cursor()
 
         for story in stories:
-            # ✅ Insert image data and return image_id
+            # Insert image data and return image_id
             cursor.execute(
                 "INSERT INTO images (file_path) VALUES (%s) RETURNING id;", 
                 (story["thumbnail_local_path"],)
             )
             image_id = cursor.fetchone()[0]  # Get the inserted image ID
 
-            # ✅ Insert article metadata
+            # Insert article metadata
             cursor.execute("""
                 INSERT INTO articles (headline, url, scrape_time, article_date, image_id)
                 VALUES (%s, %s, %s, %s, %s);
@@ -50,11 +50,11 @@ def save_to_postgresql(stories):
                 story["headline"],
                 story.get("url", "No URL"),  # Handle missing URL cases
                 datetime.now(),
-                None,  # Replace with actual article date if available
+                story.get("article_date", None),  # Handle missing article date
                 image_id,
             ))
 
-        # ✅ Commit changes to the database
+        # Commit changes to the database
         conn.commit()
         print(f"Inserted {len(stories)} stories into the database.")
 
@@ -62,13 +62,13 @@ def save_to_postgresql(stories):
         print(f"Error saving to database: {e}")
 
     finally:
-        # ✅ Ensure conn is closed only if it was successfully opened
+        # Ensure conn is closed only if it was successfully opened
         if conn:
             cursor.close()
             conn.close()
 
 if __name__ == "__main__":
-    # ✅ Load JSON data
+    # Load JSON data from Module 3 output
     json_file = "news_stories.json"  # Ensure this file exists
     stories = load_json_data(json_file)
 
